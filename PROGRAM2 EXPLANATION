@@ -1,0 +1,50 @@
+In this program, we first load the contents from paragraph.txt.
+It contains six sentence and some words.
+Then we begin running the program.
+We first store the words (include space and \n) to the memory started from 500
+We then store the words to look up started at 400
+We store the length of the words to look up at memory 28                            (0)
+We then scan the words from memory at 500
+Put the location of the first character of each word at location started from 1000  (1)
+Put the location of the last character of each word at location started from 1100   (2)
+Put the location of the row number of each word at location started from 1200
+Put the location of the column character of each word at location started from 1300
+Then we can know the length of each word from (1) and (2)                           (3)
+We compare (0) and (3) if equal then it means the length is the same
+and we compare the two words if not equal, we jump to next word
+In the comparison of the two words, if any matched character, if they are different
+We set the flag bit 1 located at memory 1
+After scanning each words, we check the flag bit and determine whether to output
+At last we output the row and column and the words we find.
+
+Pseudocode
+
+String wordToScan;
+String words[100];
+int length;
+int templength;
+int number;
+int row[100];
+int column[100];
+int flag = 0;
+read words from paragraph.txt
+we then store the words to words[]
+the row to row[] and the column to column[], and 
+we know the number of words
+input word to look up
+length = wordToScan.length();
+for(int i = 0;i < number; i++ ){
+	if(length == words[i].length())
+	{
+		for(int j = 0; j < length; j++){
+			if(words[i][j] != wordToScan[j])//may need to change in real java maybe tostring
+				flag = 1;
+				
+		}
+		if(flag == 0)
+		{
+			output row column and word
+		}
+		flag = 0;
+	}
+}

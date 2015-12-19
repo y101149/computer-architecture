@@ -1,0 +1,9 @@
+We first store a float number 5.25 at memory location 1
+then we store a integer 9 at memory location 2
+CNVRT R0 X0 0 1    this means NOW R0 = 0, we want to convert from float to fix number
+and we convert 5.25 to 5 and store it in R0	
+LDA R1 X0 0 1      this means we load 1 to R1
+CNVRT R1 X0 0 2    this means NOW R1 = 1, we want to convert from fix to float number
+and we then convert 9 to 9.0 and store it in FR0
+
+

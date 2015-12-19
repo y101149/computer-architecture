@@ -1,0 +1,6 @@
+I implement vector add operation
+The example execute the following vector add operation:
+vector a = {2,4,6}
+vector b = {1,3,5}
+a = a + b
+so the final answer should be a = {3,7,11}
